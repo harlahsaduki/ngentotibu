@@ -42,7 +42,7 @@ export async function generateMetadata(
     const file = data.result[0];
     const title = `${file.title} - ${SITENAME}`;
     const description = `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`;
-    const image = file.snap_img;
+    const image = file.snaps_img;
     const previousOgImages = (await parent).openGraph?.images || [];
     const previousTwImages = (await parent).twitter?.images || [];
 
@@ -86,7 +86,7 @@ const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'VideoObject',
         name: `${file.title} - ${SITENAME}`,
-        thumbnailUrl: file.snap_img,
+        thumbnailUrl: file.snaps_img,
         description: `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
         url: `https://ngentotibu.pages.dev/v/${file.filecode}`,
         embedUrl: `https://doodstream.com/e/${file.filecode}`,
@@ -106,7 +106,7 @@ const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: `${file.title} - ${SITENAME}`,
-        image: file.snap_img,
+        image: file.snaps_img,
         description: `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
         url: `https://ngentotibu.pages.dev/v/${file.filecode}`,
         datePublished: new Date(
